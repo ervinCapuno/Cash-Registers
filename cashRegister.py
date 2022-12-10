@@ -1,8 +1,6 @@
 from datetime import datetime
-import json
 from customer import Customer
 from invoiceItem import InvoiceItem
-from item import Item
 
 class CashRegister:
     """Cash Register for each customer"""
@@ -63,39 +61,28 @@ class CashRegister:
 
     def getInvoiceTotal(self):
         return self.invoiceTotal
+        
+    def getPurchase(self):
+        for item in self.items.values():
+            print(item)
 
     def displayInvoice(self):
         print()
         print("+" * 70)
-        print("\t\t\t  Reciept")
+        print("\t\t\t  Receipt")
         print("+" * 70)
         print(self)
         print(f"Date: {self.purchaseDate.strftime('%B %d, %Y')}")
         print("-" * 70)
-        for item in self.items.values():
-            print(item)
+        self.getPurchase()
         print("-" * 70)
         print(f"Total Price:  {self.getInvoiceTotal():.2f}")
         print("+" * 70)
 
+    def notOfficialInvoice(self):
+        print("-" * 35 +  "Purchase" + "-" * 35)
+        self.getPurchase()
+        print("-" * 80)    
 
-    def getItemAsDict(self):
-        items_dict = {}
-
-        for item_name, invoice_item in self.items.items():
-            items_dict[item_name] = invoice_item.dict()
-        return items_dict
     
-    def dict(self):
-        """Returns dictionary representation of Cash Register"""
-        CashRegister = {
-            "Customer": self.customer.dict(),
-            "items" : self.getItemAsDict(),
-            "Purchase Date": self.purchaseDate.strftime("%B %d, %Y"),
-            "Invoice Total" : self.getInvoiceTotal()
-        }
-        return CashRegister
-
-    def toJSON(self):
-        return json.dumps(self.dict(), indent = 4, sort_keys= True)
 
