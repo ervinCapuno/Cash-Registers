@@ -18,5 +18,4 @@ class InvoiceItem:
     def getSubTotal(self):
         return self.subTotal
 
-    def dict(self):
-        return {"id": self.idItem, "name": self.item.name, "Quantity": self.qty, "sub_total" : self.getSubTotal()}
+    
