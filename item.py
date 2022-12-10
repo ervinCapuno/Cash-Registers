@@ -21,5 +21,3 @@ class Item:
     def getprice(self):
         return self.price
 
-    def dict(self):
-        return self.__dict__
