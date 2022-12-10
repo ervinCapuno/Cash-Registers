@@ -3,12 +3,14 @@ from customer import Customer
 from item import Item
 import os
 from tabulate import tabulate
+from utils import ErrorHandling as EH
 
 
 #global variables
 #getting the name of the customer
-firstName = str(input("What is your first name: "))
-lastName = str(input("What is your last name: "))
+firstName = EH.userNameValue("First")
+lastName = EH.userNameValue("Last")
+
 customer = Customer(firstName, lastName)
 cRegister = CashRegister(customer)
 
@@ -20,48 +22,7 @@ energyDrink = Item(103, "Coke", 20)
 shoes = Item(104, "Shoes", 200)
 slippers = Item(105, "Slippers", 75)
 
-def choiceError():
-    while True:
-        try:
-            itemId = int(input("Enter the ID of the Item: "))
-            return itemId
-            break
-        except:
-            print("Enter a valid number!")        
 
-def QtyError():
-    while True:
-        try:
-            qty = int(input("Quantity of your order: "))
-            return qty
-            break
-        except:
-            print("Enter a valid number!")
-
-def inputError():
-    while True:
-        try:
-            inp = input("Enter your choice: ")
-            return inp
-            break
-        except:
-            print("Invalid input!")
-
-
-def inputChoice():
-    while True:
-        try:
-            choice = input("Do you want to continue[y/n]: ")
-            if choice.upper() == "Y":
-                return choice
-                break
-            elif choice.upper() == "N":
-                return choice
-                break
-            else:
-                print("Cannot Recognized!")
-        except:
-            print("Invalid input!")
 
 #show the items in the store
 def showItems():
@@ -80,38 +41,34 @@ def showItems():
 
 #selecting the items
 def select():
-    os.system('cls')
 
     showItems()
     os.system('cls')
     showItems()
     selectItem = 'Y'
     while selectItem.upper() == 'Y':
-        order = choiceError()
+        order = EH.choiceError()
         if order == 100:
-            qty = QtyError()
+            qty = EH.QtyError()
             cRegister.addItems(milk, qty)
         elif order == 101:
-            qty = QtyError()
+            qty = EH.QtyError()
             cRegister.addItems(pencil, qty)
         elif order == 102:
-            qty = QtyError()
+            qty = EH.QtyError()
             cRegister.addItems(biscuits, qty)
         elif order == 103:
-            qty = QtyError()
+            qty = EH.QtyError()
             cRegister.addItems(energyDrink, qty)
         elif order == 104:
-            qty = QtyError()
+            qty = EH.QtyError()
             cRegister.addItems(shoes, qty)
         elif order == 105:
-            qty = QtyError()
+            qty = EH.QtyError()
             cRegister.addItems(slippers, qty)
         else:
             print("ID Not Found! You entered a wrong id!")
-        selectItem = inputChoice()
-
-def JSONinfo():
-    print(cRegister.toJSON())
+        selectItem = EH.inputChoice()
 
 
 #removing an item
@@ -120,9 +77,9 @@ def removes():
     remRun = 'Y'
     while remRun.upper() == 'Y':
         if cRegister.getItemlength() > 0:
-            JSONinfo()
+            cRegister.notOfficialInvoice()
             #cRegister.displayInvoice()
-            remItem = choiceError()
+            remItem = EH.choiceError()
             if remItem == 100:
                 cRegister.removeItem(milk)
             elif remItem == 101:
@@ -139,7 +96,7 @@ def removes():
                 print("Invalid input!")
                 os.system('cls')
             
-            remRun = inputChoice()
+            remRun = EH.inputChoice()
             os.system('cls')
 
         else:
@@ -153,9 +110,9 @@ def updates():
         if cRegister.getItemlength() > 0:
             #printing the reciept
             #cRegister.displayInvoice()
-            JSONinfo()
-            updItem = choiceError()
-            updQty = QtyError()
+            cRegister.notOfficialInvoice()
+            updItem = EH.choiceError()
+            updQty = EH.QtyError()
             if updItem == 100:
                 cRegister.updateItem(milk, updQty)
             elif updItem == 101:
@@ -170,8 +127,7 @@ def updates():
                 cRegister.updateItem(slippers, updQty)
             else:
                 print("Invalid input!")
-                os.system('cls')
-            updateRun = inputChoice()
+            updateRun = EH.inputChoice()
             os.system('cls')
         else:
             print("Looks like there are no items to update!")
@@ -181,7 +137,7 @@ def mainMenu():
     while True:
         print("\t\t\tCHOOSE\n\n")
         print("[A]Add     [U] UPDATE       [R] REMOVE       [P]Print\n\n")
-        choice = inputError()
+        choice = EH.inputError()
         if choice.upper() == "A":
             select()
         elif choice.upper() == "U":
@@ -197,15 +153,20 @@ def mainMenu():
 
 #driver code
 def main():
-    os.system('cls')
-    
-    #calling the select function to select the item that the customer want to buy
-    select()
-    os.system('cls')
-    mainMenu()
-    os.system('cls')
-    #printing the reciept
-    cRegister.displayInvoice()
+
+    while True:
+        #calling the select function to select the item that the customer want to buy
+        select()
+        os.system('cls')
+        mainMenu()
+        os.system('cls')
+        #printing the reciept
+        if cRegister.getItemlength() > 0:
+            cRegister.displayInvoice()
+            break
+        else:
+            print("You didn't buy any item!")
+                
 
 if __name__ == '__main__':
     main()
