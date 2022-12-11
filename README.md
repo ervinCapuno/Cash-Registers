@@ -36,6 +36,10 @@
 - ![removes](https://user-images.githubusercontent.com/113989514/206900791-f91d9893-e991-4761-811a-acb2993d7f1e.png)
 - ![receipt](https://user-images.githubusercontent.com/113989514/206900793-b9b61659-ff04-486b-b4b1-aa5dda2e9e1c.png)
 
+## Self Assessment
+- ![SELF ASSESSMENT](https://user-images.githubusercontent.com/113868448/206908967-510af5de-d642-4f12-93f2-ecda043a3022.jpg)
+- Done by group
+- 18 / 24
 
 ## Authors
 - [@Roseann Capio]( https://github.com/roseann000)
