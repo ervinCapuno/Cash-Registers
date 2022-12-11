@@ -12,7 +12,7 @@ class InvoiceItem:
         return "<class 'IvoiceItem'>"
 
     def __str__(self):
-        return f"ID: {self.idItem} Item: {self.item.name}  Qty: {self.qty} Sub Total: {self.getSubTotal():.2f}"
+        return f"ID: {self.idItem}\t\t Item: {self.item.name}\t  Qty: {self.qty}\t Sub Total: {self.getSubTotal():.2f}"
         
 
     def getSubTotal(self):
