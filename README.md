@@ -26,7 +26,7 @@
 - Register
 
 ## UML - Unified Modeling Language
-![Untitled Diagram (1)](https://user-images.githubusercontent.com/113989514/206895746-0481400e-47a3-4f09-8a6f-02e7140e6164.jpg)
+![uml diagram](https://user-images.githubusercontent.com/113868448/206907953-1c6299c7-5311-49a5-a5c3-87d8497678db.jpg)
 
 ## Screenshots
 - ![customerInfo](https://user-images.githubusercontent.com/113989514/206901202-55e3df0d-035d-4531-b81c-dda578c2a776.png)
