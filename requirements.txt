@@ -1,0 +1,7 @@
+this program use third party library called tabulate. It is used to create table
+
+
+Installation:
+
+open cmd/terminal and type pip install tabulate 
+
