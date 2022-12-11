@@ -32,10 +32,11 @@
 ![Untitled Diagram (1)](https://user-images.githubusercontent.com/113989514/206895746-0481400e-47a3-4f09-8a6f-02e7140e6164.jpg)
 
 
-			Authors
-Capio, Rose Ann
-Capuuno, Ervin Rey
-Caringal, Karl Philipp
-Ilao, Andrei Emmanuel
+## Authors
+- [@Roseann Capio]( https://github.com/roseann000)
+- [@Ervin Rey Capuno]( https://github.com/ervinCapuno)
+- [@Karl Caringal]( https://github.com/caringalkarl)
+- [@Andrei Emmanuel Ilao]( https://github.com/Andrei1216)
+
 
 
