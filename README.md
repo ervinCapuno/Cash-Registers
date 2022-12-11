@@ -1,7 +1,6 @@
 # Cash-Registers
 
 
-
 			How the Program Works
 - the code in the programs starts by taking the first name and last name of the customer
 - there are 6 items in the program where the user can select from (milk, pencil, biscuit, 
@@ -18,6 +17,25 @@ name, price)
 - it would display the customer name, date, total items, subtotal of specific items, and total price of
 all items purchased or the whole transaction
 
-			Requirement Installation
-Open the terminal/cmd and type pip install tabulate
+
+			Built-in Modules
+os
+
+			Customized Modules
+cashRegister
+customer
+invoiceItem
+item
+utils
+
+			UML -Unified Modeling Language
+https://drive.google.com/file/d/1wLDPXuynOAQPhYA9vupDl0E5H56W9lBd/view?usp=share_link
+
+
+			Authors
+Capio, Rose Ann
+Capuuno, Ervin Rey
+Caringal, Karl Philipp
+Ilao, Andrei Emmanuel
+
 
