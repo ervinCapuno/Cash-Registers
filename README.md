@@ -29,9 +29,7 @@
 
 
 ## UML - Unified Modeling Language
-![Logo](https://drive.google.com/file/d/1wLDPXuynOAQPhYA9vupDl0E5H56W9lBd/view?usp=share_link.jgp
-)
-
+![UML](https://user-images.githubusercontent.com/113989514/206895057-190ef6d1-5f25-4eb3-b616-471832d87c9f.jpg)
 
 			Authors
 Capio, Rose Ann
