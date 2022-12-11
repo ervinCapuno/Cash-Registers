@@ -29,7 +29,7 @@
 ![Untitled Diagram (1)](https://user-images.githubusercontent.com/113989514/206895746-0481400e-47a3-4f09-8a6f-02e7140e6164.jpg)
 
 ## Screenshots
-- ![customerInfo](https://user-images.githubusercontent.com/113989514/206900752-a02bc676-58b8-4b25-b370-e4896d9ad0e5.png)
+- ![customerInfo](https://user-images.githubusercontent.com/113989514/206901202-55e3df0d-035d-4531-b81c-dda578c2a776.png)
 - ![Add](https://user-images.githubusercontent.com/113989514/206900766-65915a38-44ad-496e-a218-f73ec3f24b40.png)
 - ![mainMenu](https://user-images.githubusercontent.com/113989514/206900779-775c0654-57fb-4b57-8000-229513f2a57a.png)
 - ![updates](https://user-images.githubusercontent.com/113989514/206900786-92a9b711-6a48-4626-a679-df37867c7ea4.png)
