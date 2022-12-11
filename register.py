@@ -91,11 +91,9 @@ class Register:
                     cRegister.removeItem(slippers)
                 else:
                     print("Invalid input!")
-                    os.system('cls')
                 
                 remRun = EH.inputChoice()
                 os.system('cls')
-
             else:
                 print("Looks like there are no items to remove!")
                 break
