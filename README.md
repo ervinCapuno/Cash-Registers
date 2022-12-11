@@ -1,11 +1,9 @@
-# Cash-Registers
 
+# Cash Register
 
-			How the Program Works
+## HOW THE PROGRAM WORKS
 - the code in the programs starts by taking the first name and last name of the customer
-- there are 6 items in the program where the user can select from (milk, pencil, biscuit, 
-energy drink, shoes, slippers) they all have different parameters from the init method (ids, 
-name, price)
+- there are 6 items in the program where the user can select from (milk, pencil, biscuit, energy drink, shoes, slippers) they all have different parameters from the init method (ids, name, price)
 - user selects the id of an item and inputs the quantity the user wants to purchase
 - the user gets a prompt if it wants to add another item or not
 - if user picks yes, the user can select another item to purchase
@@ -14,22 +12,25 @@ name, price)
 - the update method would allow the user to change the quantity of the item previously selected
 - the remove method would remove an item that the user selected
 - the print method would print the invoice total of the user
-- it would display the customer name, date, total items, subtotal of specific items, and total price of
-all items purchased or the whole transaction
+- it would display the customer name, date, total items, subtotal of specific items, and total price of all items purchased or the whole transaction
+
+## Built-in Modules
+- os
+
+## Customized Modules
+- cashRegister
+- customer
+- invoiceItem
+- item
+- utils
+- Register
 
 
-			Built-in Modules
-os
 
-			Customized Modules
-cashRegister
-customer
-invoiceItem
-item
-utils
 
-			UML -Unified Modeling Language
-https://drive.google.com/file/d/1wLDPXuynOAQPhYA9vupDl0E5H56W9lBd/view?usp=share_link
+## UML - Unified Modeling Language
+![Logo](https://drive.google.com/file/d/1wLDPXuynOAQPhYA9vupDl0E5H56W9lBd/view?usp=share_link.jgp
+)
 
 
 			Authors
