@@ -14,6 +14,10 @@
 - the print method would print the invoice total of the user
 - it would display the customer name, date, total items, subtotal of specific items, and total price of all items purchased or the whole transaction
 
+## General Instruction
+- All python files should be together in a folder
+- open register.py and run the driver code of the program
+
 ## Built-in Modules
 - os
 - datetime
