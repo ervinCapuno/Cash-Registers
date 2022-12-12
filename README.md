@@ -16,6 +16,7 @@
 
 ## Built-in Modules
 - os
+- datetime
 
 ## Customized Modules
 - cashRegister
